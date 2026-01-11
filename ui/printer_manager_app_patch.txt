@@ -1,0 +1,17 @@
+def update_file_list(self):
+    from printer.api import get_current_printing_file
+    self.file_list.clear()
+    selected_printers = self.get_selected_printers()
+    if not selected_printers:
+        self.file_list_label.setText("File đang được in: (Chọn máy in để xem)")
+        return
+    printing_files = []
+    for ip in selected_printers:
+        filename = get_current_printing_file(ip)
+        if filename and filename != "None":
+            printing_files.append(f"{ip}: {filename}")
+        else:
+            printing_files.append(f"{ip}: Không có file đang in")
+    self.file_list_label.setText(f"File đang được in: ({len(printing_files)} máy)")
+    for info in printing_files:
+        self.file_list.addItem(info)

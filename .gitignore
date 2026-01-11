@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+Active venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# PyQt
+*.ui.py
+
+# Application specific
+config/DATA_LOCATION_INFO.txt
+*.cfg
+*.conf
+!config/printer.cfg
+!config/moonraker.conf
+!config/gcode_macro.cfg
+!config/printer_params.cfg
+!config/sensorless.cfg
+!config/factory_printer.cfg
+
+# User data and logs
+*.log
+*.db
+*.sqlite
+*.json.bak
+IP/printer_ip_mapping.csv
+IP/ip_stability_report.txt
+IP/ssh_config.txt
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Build artifacts
+*.exe
+*.msi
+installer/
+
+# Backup
+*.bak
+*.backup
+*~
